@@ -1,0 +1,32 @@
+{
+  "name": "linkedin-copilot-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/app/server.js",
+  "scripts": {
+    "start": "node src/app/server.js",
+    "dev": "node --watch src/app/server.js",
+    "worker": "node src/app/worker.js",
+    "worker:dev": "node --watch src/app/worker.js"
+  },
+  "dependencies": {
+    "@silay/core": "^1.0.3",
+    "@silay/logger": "^1.0.1",
+    "amqplib": "^2.0.1",
+    "bcryptjs": "^3.0.3",
+    "connect-redis": "^10.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.9.3",
+    "multer": "^2.3.0",
+    "redis": "^6.2.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
+  }
+}

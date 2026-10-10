@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Design tokens for the Copilot workspace — a "drafting desk" feel:
+     warm paper surface, ink-navy text, one confident cobalt accent for
+     action, plus dedicated status hues (not default red/green-500). */
+  --font-display: "Space Grotesk", "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-paper: #f6f5f1;
+  --color-paper-raised: #ffffff;
+  --color-ink: #15181f;
+  --color-ink-soft: #565b66;
+  --color-ink-faint: #9297a1;
+  --color-line: #e5e2d9;
+
+  --color-accent: #3552ff;
+  --color-accent-ink: #ffffff;
+  --color-accent-soft: #e8ecff;
+
+  --color-positive: #3f7a5c;
+  --color-positive-soft: #e5f1eb;
+  --color-critical: #b8402a;
+  --color-critical-soft: #fbe9e4;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
